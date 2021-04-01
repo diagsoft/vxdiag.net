@@ -1,0 +1,271 @@
+/* 代码整理：懒人之家 www.lanrenzhijia.com */
+.flickerplate3 .flicks img{
+width:100% ;
+z-index:0;
+}
+.flickerplate3 {
+	position:relative;
+	width:100%;
+	height:100%;
+/*	background-color:#e6e6e6;*/
+	overflow:hidden;
+}
+.flickerplate3 ul.flicks {
+	width:10000%;
+	height:100%;
+	padding:0px;
+	margin:0px;
+	list-style:none ;
+}
+.flickerplate3 ul.flicks>li {
+	float:left;
+	width:1%;
+	height:100%;
+	background-position:center;
+	background-size:cover;
+	display:table;
+}
+.flickerplate3 ul.flicks>li .flick-inner {
+	height:100%;
+	color:#fff;
+	display:table-cell;
+	vertical-align:middle
+}
+.flickerplate3 ul.flicks>li .flick-inner .flick-content {
+	/*
+	max-width:68.75em;
+	margin-left:auto;
+	margin-right:auto;
+	*/
+}
+.flickerplate3 ul.flicks>li .flick-title {
+	padding:0px 0px;
+	font-size:2.778em;
+	line-height:1.995em;
+	text-align:center;
+	margin-top:-30%;
+}
+@media only screen and (max-width: 43.813em) {
+.flickerplate3 ul.flicks>li .flick-title {
+font-size:1.667em;
+}
+}
+.flickerplate3 ul.flicks>li .flick-sub-text {
+
+	font-weight:300;
+	line-height:2.5em;
+	color:rgba(255, 255, 255, 0.8);
+	text-align:center;
+}
+.flickerplate3 ul.flicks>li .flick-title span.flick-block-text, .flickerplate3 ul.flicks>li .flick-sub-text span.flick-block-text {
+	/*padding:12px 18px;*/
+	background-color:rgba(0, 0, 0, 0.6);
+}
+.flickerplate3 .arrow-navigation {
+	position:absolute;
+	height:80%;
+	width:10%;
+	min-width:100px;
+	top:10%;
+	z-index:100;
+	overflow:hidden;
+}
+.flickerplate3 .arrow-navigation .arrow {
+	display:block;
+	height:100%;
+	width:100%;
+	-webkit-transition:all 0.2s ease-out;
+	-moz-transition:all 0.2s ease-out;
+	-o-transition:all 0.2s ease-out;
+	-ms-transition:all 0.2s ease-out;
+	transition:all 0.2s ease-out;
+}
+.flickerplate3 .arrow-navigation:hover, .flickerplate3 .arrow-navigation .arrow:hover {
+	cursor:pointer;
+}
+.flickerplate3 .arrow-navigation.left {
+	left:0px;
+	margin-left:40px;
+}
+.flickerplate3 .arrow-navigation.left .arrow {
+	opacity:0;
+	margin:0px 0px 0px 0px;
+	background-image:url("../img/flickerplate/arrow-left-green.png");
+	background-size:35px 91px;
+	background-repeat:no-repeat;
+	background-position:right;
+}
+.flickerplate3 .arrow-navigation.right {
+	right:0px;
+	margin-right:40px;
+}
+.flickerplate3 .arrow-navigation.right .arrow {
+	opacity:0;
+	margin:0px 0px 0px 0px;
+	background-image:url("../img/flickerplate/arrow-right-green.png");
+	background-size:35px 91px;
+	background-repeat:no-repeat;
+	background-position:left;
+}
+.flickerplate3 .arrow-navigation.left.hover .arrow {
+	opacity:1;
+	background-position:left;
+}
+.flickerplate3 .arrow-navigation.right.hover .arrow {
+	opacity:1;
+	background-position:right;
+}
+.flickerplate3 .dot-navigation {
+	position:absolute;
+	bottom:-10px;
+	width:100%;
+	text-align:center;
+	z-index:100;
+}
+.flickerplate3 .dot-navigation ul {
+	text-align:center;
+	list-style:none;
+	padding:0px 0px;
+	float:left;
+	height:120px;
+	width:100%;
+	border:1px solid rgba(18,21,44,0.0);
+}
+.flickerplate3 .dot-navigation ul li {
+	width:calc( 100% / 3 );
+	height:120px;
+	overflow:hidden;
+/*	display:inline-block;*/
+	float:left;	
+	text-align:center;
+	border-left: 1px dotted rgba(00,137,126,0.8);
+	border-right: 1px dotted rgba(00,137,126,0.8);
+}
+.flickerplate3 .dot-navigation ul li:nth-last-child(1){border-right: 0px;}
+.flickerplate3 .dot-navigation ul li:nth-child(1){border-left: 0px;}
+.flickerplate3 .dot-navigation ul li:hover {
+height:240px;
+margin-top:-120px;
+border-top-left-radius:25px;
+border-top-right-radius:25px;
+}
+.flickerplate3 .dot-navigation .dot {
+	height:100%;
+	background: rgba(18,21,44,0.2);
+	padding-top:10px;
+/*
+	width:14px;
+	height:14px;
+	margin:0px 6px;
+	background-color:rgba(00,150,136,0.3);
+	border-radius:50%;
+	-o-border-radius:50%;
+	-ms-border-radius:50%;
+	-moz-border-radius:50%;
+	-webkit-border-radius:50%;
+	-webkit-transition:background-color 0.2s ease-out;
+	-moz-transition:background-color 0.2s ease-out;
+	-o-transition:background-color 0.2s ease-out;
+	-ms-transition:background-color 0.2s ease-out;
+	transition:background-color 0.2s ease-out;
+	*/
+	border-top: 1px solid rgba(00,172,233,0.4);
+	border-bottom: 1px solid rgba(00,172,233,0.4);
+}
+.flickerplate3 .dot-navigation .dot:hover {
+/*	cursor:pointer;*/
+height:100%;
+
+}
+.flickerplate3 .dot-navigation .dot.active {
+background-color:rgba(18,21,44,0.4);
+height:100%;
+	border-top: 2px solid rgba(00,172,233,0.8);
+	border-bottom: 2px solid rgba(00,172,233,0.8);
+}
+.flickerplate3 .dot-navigation .dot.active hr{border-top:1px solid rgba(00,172,233,0.7);}
+
+.flickerplate3 .dot-navigation .dot p:nth-child(1){
+	font-size:x-large !important;
+	color:rgba(00,172,233,0.8) !important;
+}
+.flickerplate3 .dot-navigation .dot p{
+	color:rgba(255,255,255,0.8) !important;
+	margin:0 0;
+}
+
+.flickerplate3 .dot-navigation .dot hr{
+	border-top:1px solid rgba(00,172,233,0.1);
+	clear:both;
+	width:100%
+}
+.flickerplate3 .dot-navigation.left, .flickerplate3 .dot-navigation.left ul {
+	text-align:left;
+}
+.flickerplate3 .dot-navigation.right, .flickerplate3 .dot-navigation.right ul {
+	text-align:right;
+}
+.flickerplate3.flicker-theme-dark .arrow-navigation.left .arrow {
+	background-image:url("../img/flickerplate/arrow-left-dark.png");
+}
+.flickerplate3.flicker-theme-dark .arrow-navigation.right .arrow {
+	background-image:url("../img/flickerplate/arrow-right-dark.png");
+}
+.flickerplate3.flicker-theme-dark .dot-navigation .dot {
+	background-color:rgba(0, 0, 0, 0.12);
+}
+.flickerplate3.flicker-theme-dark .dot-navigation .dot:hover {
+	background-color:rgba(0, 0, 0, 0.6);
+}
+.flickerplate3.flicker-theme-dark .dot-navigation .dot.active {
+	background-color:#000;
+}
+.flickerplate3.flicker-theme-dark ul.flicks li .flick-inner {
+	color:rgba(0, 0, 0, 0.9);
+}
+.flickerplate3.flicker-theme-dark ul.flicks li .flick-inner .flick-content .flick-sub-text {
+	color:rgba(0, 0, 0, 0.9);
+}
+.flickerplate3.flicker-theme-dark ul.flicks li .flick-inner .flick-content .flick-title span.flick-block-text, .flickerplate3.flicker-theme-dark ul.flicks li .flick-inner .flick-content .flick-sub-text span.flick-block-text {
+	background-color:rgba(255, 255, 255, 0.5);
+}
+.flickerplate3 ul.flicks li.flick-theme-dark .flick-inner {
+	color:rgba(0, 0, 0, 0.9);
+}
+.flickerplate3 ul.flicks li.flick-theme-dark .flick-inner .flick-content .flick-sub-text {
+	color:rgba(0, 0, 0, 0.9);
+}
+.flickerplate3 ul.flicks li.flick-theme-dark .flick-inner .flick-content .flick-title span.flick-block-text, .flickerplate3 ul.flicks li.flick-theme-dark .flick-inner .flick-content .flick-sub-text span.flick-block-text {
+	background-color:rgba(255, 255, 255, 0.5);
+}
+.flickerplate3.animate-transform-slide ul.flicks {
+	-webkit-perspective:1000;
+	-webkit-backface-visibility:hidden;
+	transform:translate3d(0%, 0px, 0px);
+	-webkit-transform:translate3d(0%, 0px, 0px);
+	-webkit-transition:-webkit-transform 0.6s;
+	-o-transition:-o-transform 0.6s;
+	-moz-transition:-moz-transform 0.6s;
+	transition:transform 0.6s;
+}
+.flickerplate3.animate-transition-slide ul.flicks {
+	position:relative;
+	left:0%;
+	-webkit-transition:left 0.4s ease-out;
+	-moz-transition:left 0.4s ease-out;
+	-o-transition:left 0.4s ease-out;
+	-ms-transition:left 0.4s ease-out;
+	transition:left 0.4s ease-out;
+}
+.flickerplate3.animate-jquery-slide ul.flicks {
+	position:relative;
+	left:0%;
+}
+.flickerplate3.animate-scroller-slide {
+	padding-bottom:0px;
+	overflow:auto;
+}
+.flickerplate3.animate-scroller-slide ul.flicks {
+	position:auto;
+}
+/* 代码整理：懒人之家 www.lanrenzhijia.com */

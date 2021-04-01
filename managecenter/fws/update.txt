@@ -1,0 +1,527 @@
+﻿# VCX Firmware Update History
+# VCX 固件更新历史
+
+
+
+================================================================================
+## 2020.10.19	v1.8.3.0
+------------------------------------------
+* FIX: Fix VCI software may crash after soft reset.
+* FIX: Fix license read error in some condition.
+* OPT: Optimize remote diagnosis DoNet connection stability.
+------------------------------------------
+* 修正: 软复位后可能导致 VCI 软件崩溃无响应.
+* 修正: 部分情况下读取授权失败.
+* 优化: 定时消息发送失败时的处理.
+
+
+================================================================================
+## 2020.09.15	v1.8.2.0
+------------------------------------------
+* FIX: TP20 protocol programming failure.
+* FIX: ISO15765 P2Max process (Ford mondeo test error).
+* OPT: Optimize remote diagnosis DoNet connection stability.
+------------------------------------------
+* 修正: TP20 协议编程失败.
+* 修正: ISO15765 协议 P2Max 超时处理 (Ford Mondeo 测试错误).
+* 优化: 优化远程诊断 DoNet 连接稳定性.
+
+
+================================================================================
+## 2020.08.21	v1.8.0.0
+------------------------------------------
+* UPD: Update new platform with SDK v1.8.0.0
+* ADD: LIN bus protocol.
+* FIX: OBD IGSW Pin voltage read.
+------------------------------------------
+* 更新 同步更新新平台 SDK v1.8.0.0
+* 新增 LIN 总线协议.
+* 优化 OBD 点火电压信号读取.
+
+
+================================================================================
+## 2020.04.16	v1.6.6.0
+------------------------------------------
+* FIX: TP20 protocol MNST repeat send process(ODIS engineering programming).
+* FIX: ISO15765_EXT_BMW simulator send(DoNET remote diagnosis).
+------------------------------------------
+* 修复 TP20 协议 MNTB 重发处理(ODIS工程师编程).
+* 修复 ISO15765_EXT_BMW 模拟发送(DoNET远程模式).
+
+
+================================================================================
+## 2019.12.15	v1.6.5.0
+------------------------------------------
+* Add ISO11898 protocol multiple send mode (for DoNet).
+------------------------------------------
+* 新增 ISO11898 协议增加 MULTI 多帧发送模式 (远程诊断).
+
+
+================================================================================
+## 2019.10.11	v1.6.4.1
+------------------------------------------
+* Add hardware model NTG
+------------------------------------------
+* 新增 硬件型号NTG
+
+
+================================================================================
+## 2019.08.26	v1.6.4.0
+------------------------------------------
+* Fix ISO15765 protocol receive message with mixed ext address(PORSCHE 970)
+------------------------------------------
+* 修正 ISO15765 协议接收时智能识别是否带扩展地址/两种模式混合(PROSCHE 970)
+
+
+================================================================================
+## 2019.08.15	v1.6.3.0
+------------------------------------------
+* Fix Some hardware (H6 serials) read iginition voltage
+* Fix 5 Baud simulation receive
+------------------------------------------
+* 修正 部分硬件(H6系列)读取点火电压
+* 修正 5 Baud 模拟接收
+
+
+================================================================================
+## 2019.08.02	v1.6.2.0
+------------------------------------------
+* Add FACTORY SerialNumber
+* Add Fast software reset
+* Fix 29Bit CANID filter clear error(BENZ ACTORS 963)
+* Fix J1939 protocol send long frame(CAT Flash)
+* Imp Memory space
+------------------------------------------
+* 新增 FACTORY 序列号功能
+* 新增 快速软复位功能
+* 修正 29bit CANID 过滤器清除错误 (BENZ ACTROS 963)
+* 修正 J1939 协议发送长帧 (CAT Flash)
+* 优化 内存空间
+
+
+================================================================================
+## 2019.07.02	v1.6.1.0
+------------------------------------------
+* Fix ISO14230/9194 compatible with BENZ KW2K2N MR OBD-9 bus.
+------------------------------------------
+* 修正 ISO14230/9141 兼容 BENZ KW2K2N MR OBD-9总线.
+
+
+================================================================================
+## 2019.06.26	v1.6.0.0
+------------------------------------------
+* Imp J1939 protocol channel support multiple ECU network communication(CAT-C9).
+* Imp Automatically identify the interface using the SN.
+------------------------------------------
+* 优化 J1939 协议通道支持多个ECU网络节点通信(CAT-C9).
+* 优化 根据序列号SN自动识别接口.
+
+
+================================================================================
+## 2019.04.18	v1.5.5.0
+------------------------------------------
+* Add Support new bus mux chip.
+* Upd VCXBoot v1.5.1.0
+------------------------------------------
+* 新增 支持新的总线开关芯片.
+* 更新 VCXBoot v1.5.1.0
+
+
+================================================================================
+## 2019.04.09	v1.5.4.0
+------------------------------------------
+* Fix IO Expasion chip identification.
+------------------------------------------
+* 修正 IO 扩展芯片识别(增加或减少).
+
+
+================================================================================
+## 2019.03.11	v1.5.3.0
+------------------------------------------
+* Imp ISO15765 performance for receive 4KB message(BENZ DTS read all coding).
+------------------------------------------
+* 优化 ISO15765 接收 4KB 长帧处理性能(BENZ DTS工程师读取整车设码).
+
+
+================================================================================
+## 2019.03.02	v1.5.2.0
+------------------------------------------
+* Fix ISO15765 FlowControl state 31 process(BENZ 205 SCN Error).
+* Add Support H6P VCI interface identify.
+------------------------------------------
+* 修正 ISO15765 流控制状态31处理(BENZ 205 SCN设码错误).
+* 新增 支持 H6P VCI 接口自动识别.
+
+
+================================================================================
+## 2019.02.21	v1.5.0.0
+------------------------------------------
+* Upd VCXBoot v1.5.0.0 multiple app boot and update.
+* Fix J1939 flow control process when broadcast mixed with normal message(CUMMINS-QSC8.3).
+* Imp USB connection status and other etc.
+------------------------------------------
+* 更新 VCXBoot v1.5.0.0 多分区引导和固件更新.
+* 修正 J1939 多帧消息与广播消息混合时的流控制处理(CUMMINS-QSC8.3).
+* 优化 USB 连接状态和其他.
+
+
+================================================================================
+## 2018.12.27	v1.4.11.0
+------------------------------------------
+* Fix J1939 Filter PGN=00EF00 with connection management(CAT-320D2)
+* Fix J1939 broadcast filter and broadcast mixed with normal message(CUMMINS-QSM11).
+* Imp Host and device communiction performance (Fix communication CS error sometimes).
+------------------------------------------
+* 修正 J1939 过滤器 PGN=00EF00 增加连接管理(CAT-320D2).
+* 修正 J1939 广播消息过滤, 广播消息与普通多帧消息混合(CUMMINS-QSM11).
+* 优化 主机和设备之间通信效率(修复通信校验CS可能出错).
+
+
+================================================================================
+## 2018.11.30	v1.4.10.0
+------------------------------------------
+* Fix ISO15765 flow control frame send error.
+* Fix CAN2 driver control process.
+* Add V83 new hardware bus switch(Read OBD Pin Voltage).
+* Fix J1708 pin initiation.
+------------------------------------------
+* 修正 ISO15765 流控制帧发送错误.
+* 修正 CAN2 驱动器控制信号逻辑顺序.
+* 新增 V83 新版本硬件总线开关切换(读OBD引脚电压).
+* 修正 J1708 引脚初始化.
+
+
+================================================================================
+## 2018.05.10	v1.4.4.0
+------------------------------------------
+* Fix BENZ C6 CAN Bus KL15 signal filter
+* Fix BENZ C6 MBISO 5BPS initialization
+------------------------------------------
+* 修正 支持 BENZ C6 CAN 总线点火信号过滤
+* 修正 支持 BENZ C6 MBISO 协议 5BPS 初始化
+
+
+================================================================================
+## 2017.12.04	v1.4.2.0
+------------------------------------------
+* Fix HS-CAN error when multiple channel working (JLR).
+------------------------------------------
+* 修正 CAN 多通道工作时 HS-CAN 可能通信错误 (路虎第一路CAN不能测以及止动装置错误).
+
+
+================================================================================
+## 2017.11.07	v1.4.1.0
+------------------------------------------
+* Fix J1939 protocol error for CUMMINS CM850.
+------------------------------------------
+* 修正 J1939 协议测试 CUMMINS CM850 连接错误.
+
+
+================================================================================
+## 2017.09.17	v1.4.0.0
+* Add Expasion DoIP device information sync with VCX.
+------------------------------------------
+* 增加 扩展设备DOIP 与 VCX 同步扩展信息.
+
+
+================================================================================
+## 2017.09.05	v1.3.6.0
+* Optimize CAN PS switch logic.
+* Optimize TP20 protocol for J2534.
+* Fix KW1281 reset to IDLE when tx error.
+------------------------------------------
+* 优化 NANO 系列 CAN PS 引脚选择逻辑.
+* 优化 TP20 协议符合 J2534标准.
+* 修正 KW1281 发送错误时恢复空闲状态.
+
+
+================================================================================
+## 2017.08.26	v1.3.5.0
+* Fix v1.3.4.0 error for CAN OBD12/13.
+------------------------------------------
+* 修正 v1.3.4.0 固件引起的 CAN OBD12/13 错误.
+
+
+================================================================================
+## 2017.08.23	v1.3.4.0
+* Fix CAN lost data in callback when multi channel scanning(PORSCHE).
+* Fix CAN block filter do not set to hardware.
+* Add J1850 VPW and PWM switch(PB3).
+------------------------------------------
+* 修正 CAN 回掉处理丢失数据, 当多通道扫描时(PORSCHE).
+* 修正 CAN 阻止过滤器不需要配置到硬件.
+* 增加 J1850 VPM 和 PWM 切换开关(PB3).
+
+
+================================================================================
+## 2017.07.04	v1.3.3.0
+## 2017.07.01	v1.3.2.0
+* Fix CAN frame queue crash when receive large amount data(BENZ).
+* Optimize CAN rx handler and FIFO.
+* Optimize CAN reinit.
+* Optimize CAN filter overflow. 
+------------------------------------------
+* 修正 CAN 接收海量数据时缓冲队列溢出设备死机(BENZ).
+* 优化 CAN 接收中断和FIFO.
+* 优化 CAN 重新初始化.
+* 优化 CAN 过滤器溢出处理.
+
+
+================================================================================
+## 2017.06.07	v1.3.1.0
+1. Fix SWCAN error for GM GDS2.
+2. Fix CAN filter clear.
+
+
+================================================================================
+## 2017.05.22	v1.3.0.0
+1. Modify CAN hardware filter for multiple channel(for BENZ).
+
+
+================================================================================
+## 2017.05.19	v1.2.3.11
+1. Fix OBD pin voltage read for new VCX-PRO device.
+
+
+================================================================================
+## 2017.04.18	v1.2.3.10
+1. Fix ISO15765 standard extend addr error.
+2. Fix CAN baud 800k error.
+
+
+================================================================================
+## 2017.02.10	v1.2.3.6
+1. Fix TP20 Channel Setup ID dynamically alloc.
+
+
+================================================================================
+## 2017.01.20	v1.2.3.5
+1. Fix ISO15765 free protocol_buf after rx segment message break.
+
+
+================================================================================
+## 2016.12.22	v1.2.3.4
+1. Fix BMW_KCAN extend address update automatic.
+
+
+================================================================================
+## 2016.12.06	v1.2.3.3
+1. Remove IDE bit from CAN filter
+
+
+================================================================================
+## 2016.12.02	v1.2.3.2
+1. Fix BMW_KCAN extend address(TX and RX different).
+
+
+================================================================================
+## 2016.10.17	v1.2.3.1
+1. Fix OPEL KW82 protocol for GM Tech2Win.
+
+
+================================================================================
+## 2016.10.13	v1.2.3.0
+1. Fix ISO15765 recv error when RAW CAN message mixed.
+
+
+================================================================================
+## 2016.07.21	v1.2.2.9
+1. Fix TP20 Channel request RX ID start from 0.
+
+
+================================================================================
+## 2016.07.08	v1.2.2.8
+1. Add timer message PTIMER_FLAG_TX_INST.
+2. Fix 29bit CAN ID filter.
+3. Fix KW1281 protocol timer when idle.
+4. Add TP20 can bus loopback message.
+5. Fix some error.
+
+
+================================================================================
+## 2016.05.03	v1.2.2.4
+1. Fix ISO15765 receive message as ISO15765 when Filter OFF.
+
+
+================================================================================
+## 2016.04.27	v1.2.2.3
+1. Fix ISO15765 receive message as RAW when Filter do not set FlowControl.
+
+
+================================================================================
+## 2016.04.16	v1.2.2.2
+1. Fix ISO15765 receive RX_START flag message.
+2. Fix DeviceInfo.HwName to be correct with SerialNo.
+
+
+================================================================================
+## 2016.01.19	v1.2.2.1
+1. Fix ISO14230 receive KWP frame length process without P1MAX.
+
+
+================================================================================
+## 2016.01.15	v1.2.2.0
+1. Fix ISO15765 extend addr process (Toyota IMMO).
+
+
+================================================================================
+## 2016.01.12	v1.2.1.0
+1. Fix Opel KW82 protocol.
+
+
+================================================================================
+## 2016.01.05	v1.2.1.0
+1. Add protocol ISO14230, KW82.
+2. Change protocol KW81 to KW1281.
+3. A lot of optimize.
+
+
+================================================================================
+## 2015.11.04	v1.1.0.6
+1. Optimize Protocol Timer Msg to surpport with TXFLAG(GM J2534 programming)
+2. Optimize Protocol Timer Msg size to 16 bytes
+
+
+================================================================================
+## 2015.11.03	v1.1.0.6
+1. Optimize and correct J1850 VPW Bit timming issure(GM J2534 programming)
+2. Correct J1850 CRC Algorithm
+3. Correct J1850 VPW init state to IDLE
+
+
+================================================================================
+## 2015.10.28	v1.1.0.5
+1. Optimize and correct J1850 PWM Bit timming issure(FORD J2534 progarmming)
+
+
+================================================================================
+## 2015.10.24	v1.1.0.4
+1. Optimize VCX_GetDevInfo & DecodeSerial
+2. Auto set hardware comm interface(BT,WIFI) by device serialNo
+
+
+================================================================================
+## 2015.10.16	v1.1.0.4 Beta
+1. Optimize for WiFi and BT communication process automatically
+3. Add shell AT command for BT
+3. Optimize other
+
+
+================================================================================
+## 2015.09.28	v1.1.0.3
+1. Fix J1939 AC, VCX will return the Address Claime message from net.
+2. Fix J1939 AC, When RX request AC, VCX will TX the Address After Address Claime done.
+3. Fix J1939 Network Manage, tx CTS Must after AC Done.
+
+
+================================================================================
+## 2015.09.24	v1.1.0.2
+1. Fix J1850 PWM comm rx fault after VPW deinit(TIM DeInit not correct)
+
+
+================================================================================
+## 2015.09.17	v1.1.0.1
+1. Optimize ISO15756 add filter time delay.
+2. Optimize J1708 TX timing process.
+
+
+================================================================================
+## 2015.09.15	v1.1.0.1
+1. Fix J1939 rx error for CTS & EOMA (tx long message when calibration)
+
+
+================================================================================
+## 2015.09.14	v1.1.0.0
+1. VCX Boot and App update to v1.1.0.0
+2. Migrate to New VCX Secure Platform
+3. Fix some project and utils files 
+
+
+================================================================================
+## 2015.09.01	v1.0.3.26
+1. Fix ISO15765 TXFLAG_CAN_PAD not effect the global param.
+2. Fix ISO15765 RX FlowCtrl timeout process.
+
+
+================================================================================
+## 2015.08.26	v1.0.3.25
+1. Add TXFLAG_TX_IND to enable receive TX Indication (TX_DONE)
+
+
+================================================================================
+## 2015.07.28	v1.0.3.24
+1. Fix ISO15765 FlowCtrl RX msg restore to queue.
+2. Fix ISO15765 Default CAN Pad byte to 0x00.
+3. Go into DFU mode when secure error.
+4. Other optimize.
+
+
+================================================================================
+## 2015.07.21	v1.0.3.23
+1. Fix TP16/TP20 T1 T3 time set to ECU
+
+
+================================================================================
+## 2015.07.20	v1.0.3.23
+1. Fix ISO15765 receive RAW CAN data packet 6A0/6A1
+2. Fix CAN2 filter lost when CAN1 init
+3. Optimize VCX ReqLicense time.
+
+
+================================================================================
+## 2015.06.27   v1.0.3.22
+1. Optimize memory to 112KB for all protocol channel use.
+2. Fix CAN 29bit filter error for J1939
+
+
+================================================================================
+## 2015.06.23   v1.0.3.21
+1. Fix CAN Bus2 filter error for JLR.
+
+
+================================================================================
+## 2015.06.16   v1.0.3.20
+1. Fix J1939 Protocol (bus filter not reg after init).
+
+
+================================================================================
+## 2015.06.12   v1.0.3.20
+1. Fix Ford PWM error (bus IDLE state).
+
+
+================================================================================
+## 2015.06.03   v1.0.3.20
+1. Fix CAN Bus2 filter error for JLR.
+
+
+================================================================================
+## 2015.06.01   v1.0.3.20
+1. Add GM J1850VPW Protocol support for VCX-NANO.
+2. Optimize FORD J1850 PWM Protocol Check Bus Passive State Delay(2N3904)
+3. Optimize FORD J1850 PWM Protocol Tx Bus Collision Timeout (10*50ms)
+
+
+================================================================================
+## 2015.05.30   v1.0.3.19
+1. Ford J1850PWM Protocol Now support ALL Products of VCX Platform.
+2. Fix Hardware Verification Error(4 Led flashing) in some hardware.
+
+
+================================================================================
+## 2015.05.20   v1.0.3.18
+1. Add J1850PWM Protocol for Ford.
+2. Fix CAN Filter to MAX 56 each channel.
+3. Other completed.
+
+
+================================================================================
+## 2015.04.27   v1.0.3.17
+1. Add HD J1939/J1708 Support.
+2. Other completed.
+
+
+================================================================================ 
+## 2015.01.20   v1.0.3.14
+1. Fix PIWIS-II scanning all system
+2. Fix PIWIS-II programming (ISO15765 tx_stmin delay)
+

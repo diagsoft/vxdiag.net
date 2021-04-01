@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?><FW>
+	<ITEM>
+		<ID>2</ID>
+		<NAME>DoIP</NAME>
+		<VERSION>1.8.0</VERSION>
+		<SIZE>6553604</SIZE>
+		<MD5>3C5A4DD84D58A505316F946171E51C84</MD5>
+		<URL>http://www.vxdiag.net/managecenter/fws/openwrt.bin</URL>
+		<UPDATELOGURL>http://www.vxdiag.net/managecenter/fws/update_doip.txt</UPDATELOGURL>
+	</ITEM>
+	<ITEM>
+		<ID>1</ID>
+		<NAME>VCI</NAME>
+		<VERSION>1.8.4.0</VERSION>
+		<SIZE>178708</SIZE>
+		<MD5>13309B8E901F5FF5E670F92EC88DDB58</MD5>
+		<URL>http://www.vxdiag.net/managecenter/fws/vcx.bin</URL>
+		<UPDATELOGURL>http://www.vxdiag.net/managecenter/fws/update.txt</UPDATELOGURL>
+	</ITEM>
+</FW>

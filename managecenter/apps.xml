@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?><APPS>
+	<CLASS>
+		<ITEM>
+			<ID>1</ID>
+			<NAME>Automotive</NAME>
+			<LOGO>car.png</LOGO>
+			<DESC>汽车原厂诊断</DESC>
+		</ITEM>
+		<ITEM>
+			<ID>2</ID>
+			<NAME>Heavy Duty</NAME>
+			<LOGO>truck.png</LOGO>
+			<DESC>重型车辆诊断</DESC>
+		</ITEM>		
+	</CLASS>
+	
+	<APP>
+		<ITEM>
+			<ID>1</ID>
+			<CLSID>1</CLSID>
+			<NAME>PASSTHRU</NAME>
+			<DESC>SAE-J2534-2 Passthru Driver</DESC>
+			<VERSION>04.04.201029</VERSION>
+			<SIZE>708096</SIZE>
+			<MD5>81342811F88C5B81C30BEC911B9540A6</MD5>
+			<DOWNLOADURL>http://www.vxdiag.net/managecenter/apps/PASSTHRU/install.exe</DOWNLOADURL>
+			<LICENSENAME>PASSTHRU</LICENSENAME>
+			<LOGO>PASSTHRU.png</LOGO>
+			<DESCURL>http://www.vxdiag.net/managecenter/apps/PASSTHRU/update.txt</DESCURL>
+		</ITEM>
+		<ITEM>
+			<ID>2</ID>
+			<CLSID>1</CLSID>
+			<NAME>HONDA HDS</NAME>
+			<DESC>HONDA Diagnositc System. </DESC>
+			<VERSION>04.04.201029</VERSION>
+			<SIZE>899072</SIZE>
+			<MD5>8C6E8BF273086AB400985FBE9AAE1EDE</MD5>
+			<DOWNLOADURL>http://www.vxdiag.net/managecenter/apps/HONDA/install.exe</DOWNLOADURL>
+			<LICENSENAME>HONDA   </LICENSENAME>
+			<LOGO>HONDA.png</LOGO>
+			<DESCURL>http://www.vxdiag.net/managecenter/apps/HONDA/update.txt</DESCURL>
+		</ITEM>
+		<ITEM>
+			<ID>3</ID>
+			<CLSID>1</CLSID>
+			<NAME>Toyota TIS</NAME>
+			<DESC>Toyota Techstream</DESC>
+			<VERSION>04.04.201029</VERSION>
+			<SIZE>556544</SIZE>
+			<MD5>035AAC24BBDD95BFC9BA9D4334EE2837</MD5>
+			<DOWNLOADURL>http://www.vxdiag.net/managecenter/apps/TOYOTA/install.exe</DOWNLOADURL>
+			<LICENSENAME>TOYOTA  </LICENSENAME>
+			<LOGO>TOYOTA.png</LOGO>
+			<DESCURL>http://www.vxdiag.net/managecenter/apps/TOYOTA/update.txt</DESCURL>
+		</ITEM>
+		<ITEM>
+			<ID>4</ID>
+			<CLSID>1</CLSID>
+			<NAME>JLR SDD</NAME>
+			<DESC>Jaguar Landrover SDD</DESC>
+			<VERSION>04.04.201029</VERSION>
+			<SIZE>461824</SIZE>
+			<MD5>5FCEC2BC87CC9903D8DD8737A3049CB7</MD5>
+			<DOWNLOADURL>http://www.vxdiag.net/managecenter/apps/JLR/install.exe</DOWNLOADURL>
+			<LICENSENAME>JLR     </LICENSENAME>
+			<LOGO>JLR.png</LOGO>
+			<DESCURL>http://www.vxdiag.net/managecenter/apps/JLR/update.txt</DESCURL>
+		</ITEM>
+		<ITEM>
+			<ID>5</ID>
+			<CLSID>1</CLSID>
+			<NAME>Subaru SSM</NAME>
+			<DESC>Subaru Select Monitor</DESC>
+			<VERSION>2020.10.29</VERSION>
+			<SIZE>519168</SIZE>
+			<MD5>A66C30E94D03762845975EDEFF81BE94</MD5>
+			<DOWNLOADURL>http://www.vxdiag.net/managecenter/apps/SUBARU/install.exe</DOWNLOADURL>
+			<LICENSENAME>SUBARU  </LICENSENAME>
+			<LOGO>SUBARU.png</LOGO>
+			<DESCURL>http://www.vxdiag.net/managecenter/apps/SUBARU/update.txt</DESCURL>
+		</ITEM>
+		<ITEM>
+			<ID>6</ID>
+			<CLSID>1</CLSID>
+			<NAME>VOLVO VIDA</NAME>
+			<DESC>VOLVO VIDA</DESC>
+			<VERSION>04.04.201029</VERSION>
+			<SIZE>708096</SIZE>
+			<MD5>81342811F88C5B81C30BEC911B9540A6</MD5>
+			<DOWNLOADURL>http://www.vxdiag.net/managecenter/apps/VOLVO/install.exe</DOWNLOADURL>
+			<LICENSENAME>VOLVO   </LICENSENAME>
+			<LOGO>VOLVO.png</LOGO>
+			<DESCURL>http://www.vxdiag.net/managecenter/apps/VOLVO/update.txt</DESCURL>
+		</ITEM>
+		<ITEM>
+			<ID>7</ID>
+			<CLSID>1</CLSID>
+			<NAME>FORD IDS</NAME>
+			<DESC>FORD MAZDA IDS VCM-II</DESC>
+			<VERSION>2.2.0.201021</VERSION>
+			<SIZE>727040</SIZE>
+			<MD5>BB3DEC79AE9CC7C3E83F1B9212780CC1</MD5>
+			<DOWNLOADURL>http://www.vxdiag.net/managecenter/apps/FORD/install.exe</DOWNLOADURL>
+			<LICENSENAME>FORD    </LICENSENAME>
+			<LOGO>FORD.png</LOGO>
+			<DESCURL>http://www.vxdiag.net/managecenter/apps/FORD/update.txt</DESCURL>
+		</ITEM>
+		<ITEM>
+			<ID>8</ID>
+			<CLSID>1</CLSID>
+			<NAME>PORSCHE PT2</NAME>
+			<DESC>PORSCHE PIWIS TESTER II</DESC>
+			<VERSION>1.2.3.201214</VERSION>
+			<SIZE>747008</SIZE>
+			<MD5>0D7315338BFF1765E76F3F0CD9DAA82D</MD5>
+			<DOWNLOADURL>http://www.vxdiag.net/managecenter/apps/PORSCHE/install.exe</DOWNLOADURL>
+			<LICENSENAME>PORSCHE </LICENSENAME>
+			<LOGO>PORSCHE.png</LOGO>
+			<DESCURL>http://www.vxdiag.net/managecenter/apps/PORSCHE/update.txt</DESCURL>
+		</ITEM>
+		<ITEM>
+			<ID>9</ID>
+			<CLSID>1</CLSID>
+			<NAME>GM GDS2/T2W</NAME>
+			<DESC>GM GDS2 Tech2Win</DESC>
+			<VERSION>1.1.0.200810</VERSION>
+			<SIZE>651264</SIZE>
+			<MD5>9F1848C74C3A82F59CD7A4646ADC5C22</MD5>
+			<DOWNLOADURL>http://www.vxdiag.net/managecenter/apps/GM/install.exe</DOWNLOADURL>
+			<LICENSENAME>GMGDS   </LICENSENAME>
+			<LOGO>GM.png</LOGO>
+			<DESCURL>http://www.vxdiag.net/managecenter/apps/GM/update.txt</DESCURL>
+		</ITEM>
+		<!--<ITEM>
+			<ID>10</ID>
+			<CLSID>1</CLSID>
+			<NAME>VW ODIS</NAME>
+			<DESC>VW AUDI SKODA SEAT ODIS</DESC>
+			<VERSION>1.0.8.190328</VERSION>
+			<SIZE>620544</SIZE>
+			<MD5>46A7BEDD191CB432257985A9A3F34A18</MD5>
+			<DOWNLOADURL>http://www.vxdiag.net/managecenter/apps/VW/install.exe</DOWNLOADURL>
+			<LICENSENAME>VW      </LICENSENAME>
+			<LOGO>VW.png</LOGO>
+			<DESCURL>http://www.vxdiag.net/managecenter/apps/VW/update.txt</DESCURL>
+		</ITEM>-->
+		<!--<ITEM>
+			<ID>11</ID>
+			<CLSID>1</CLSID>
+			<NAME>BENZ C4</NAME>
+			<DESC>Mercedes Benz XENTRY Diagnositc</DESC>
+			<VERSION>1.0.5.620</VERSION>
+			<SIZE>702464</SIZE>
+			<MD5>4A8F446C4DD389E8CD895B2639DEF6CE</MD5>
+			<DOWNLOADURL>http://www.vxdiag.net/managecenter/apps/BENZ/install.exe</DOWNLOADURL>
+			<LICENSENAME>BENZ    </LICENSENAME>
+			<LOGO>BENZ.png</LOGO>
+			<DESCURL>http://www.vxdiag.net/managecenter/apps/BENZ/update.txt</DESCURL>
+		</ITEM>-->
+		<ITEM>
+			<ID>12</ID>
+			<CLSID>1</CLSID>
+			<NAME>JLR DoIP</NAME>
+			<DESC>JLR DoIP PathFinder</DESC>
+			<VERSION>3.1.0.200810</VERSION>
+			<SIZE>731648</SIZE>
+			<MD5>A69B592B889D695327686ED07A70C5D0</MD5>
+			<DOWNLOADURL>http://www.vxdiag.net/managecenter/apps/JLRDOIP/install.exe</DOWNLOADURL>
+			<LICENSENAME>JLRDOIP </LICENSENAME>
+			<LOGO>JLRDOIP.png</LOGO>
+			<DESCURL>http://www.vxdiag.net/managecenter/apps/JLRDOIP/update.txt</DESCURL>
+		</ITEM>
+		<ITEM>
+			<ID>13</ID>
+			<CLSID>1</CLSID>
+			<NAME>BENZ C6</NAME>
+			<DESC>Mercedes Benz XENTRY Diagnosis C6</DESC>
+			<VERSION>3.2.1.210312</VERSION>
+			<SIZE>2550272</SIZE>
+			<MD5>C0166F0DBE07FCA4EC9F0C28AEA2C225</MD5>
+			<DOWNLOADURL>http://www.vxdiag.net/managecenter/apps/BENZ/install.exe</DOWNLOADURL>
+			<LICENSENAME>BENZ    </LICENSENAME>
+			<LOGO>BENZ.png</LOGO>
+			<DESCURL>http://www.vxdiag.net/managecenter/apps/BENZ/update.txt</DESCURL>
+		</ITEM>
+		<ITEM>
+			<ID>14</ID>
+			<CLSID>1</CLSID>
+			<NAME>PORSCHE PT3G</NAME>
+			<DESC>Porsche PIWIS Tester 3</DESC>
+			<VERSION>3.2.0.200927</VERSION>
+			<SIZE>1464832</SIZE>
+			<MD5>CAA8FCEDE8D9F5A0E3B81C349E191550</MD5>
+			<DOWNLOADURL>http://www.vxdiag.net/managecenter/apps/PT3G/install.exe</DOWNLOADURL>
+			<LICENSENAME>PT3G    </LICENSENAME>
+			<LOGO>PT3G.png</LOGO>
+			<DESCURL>http://www.vxdiag.net/managecenter/apps/PT3G/update.txt</DESCURL>
+		</ITEM>
+		<ITEM>
+			<ID>15</ID>
+			<CLSID>1</CLSID>
+			<NAME>VW ODIS 6154</NAME>
+			<DESC>VW ODIS VAS-6154 driver for Win10</DESC>
+			<VERSION>3.2.2.210315</VERSION>
+			<SIZE>681472</SIZE>
+			<MD5>3B3C927EA6E3858BEF434DC432F29616</MD5>
+			<DOWNLOADURL>http://www.vxdiag.net/managecenter/apps/VW6154/install.exe</DOWNLOADURL>
+			<LICENSENAME>VW      </LICENSENAME>
+			<LOGO>VW.png</LOGO>
+			<DESCURL>http://www.vxdiag.net/managecenter/apps/VW6154/update.txt</DESCURL>
+		</ITEM>
+		<ITEM>
+			<ID>16</ID>
+			<CLSID>1</CLSID>
+			<NAME>SGM RDS</NAME>
+			<DESC>SGM RDS</DESC>
+			<VERSION>04.04.201029</VERSION>
+			<SIZE>708608</SIZE>
+			<MD5>2FE6A108BDBF8ABCBC78ED8FD494DC58</MD5>
+			<DOWNLOADURL>http://www.vxdiag.net/managecenter/apps/SGM/install.exe</DOWNLOADURL>
+			<LICENSENAME>GMGDS   </LICENSENAME>
+			<LOGO>SGM.png</LOGO>
+			<DESCURL>http://www.vxdiag.net/managecenter/apps/SGM/update.txt</DESCURL>
+		</ITEM>
+		
+		
+		<ITEM>
+			<ID>50</ID>
+			<CLSID>2</CLSID>
+			<NAME>RP1210</NAME>
+			<DESC>RP1210 A/B/C</DESC>
+			<VERSION>3.0.190615</VERSION>
+			<SIZE>535552</SIZE>
+			<MD5>51CBE1CD8B9D0039E1758B5DF2B6273B</MD5>
+			<DOWNLOADURL>http://www.vxdiag.net/managecenter/apps/RP1210/install.exe</DOWNLOADURL>
+			<LICENSENAME>RP1210  </LICENSENAME>
+			<LOGO>RP1210.png</LOGO>
+			<DESCURL>http://www.vxdiag.net/managecenter/apps/RP1210/update.txt</DESCURL>
+		</ITEM>
+		<ITEM>
+			<ID>52</ID>
+			<CLSID>2</CLSID>
+			<NAME>HINO</NAME>
+			<DESC>Hino Diagnostic eXplorer</DESC>
+			<VERSION>02.02.201029</VERSION>
+			<SIZE>565248</SIZE>
+			<MD5>B4E41D85404979D47FA709D561373418</MD5>
+			<DOWNLOADURL>http://www.vxdiag.net/managecenter/apps/HINO/install.exe</DOWNLOADURL>
+			<LICENSENAME>HINO    </LICENSENAME>
+			<LOGO>HINO.png</LOGO>
+			<DESCURL>http://www.vxdiag.net/managecenter/apps/HINO/update.txt</DESCURL>
+		</ITEM>
+		
+		
+		
+	</APP>
+</APPS>

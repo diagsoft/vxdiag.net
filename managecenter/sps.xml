@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<SPS>
+
+		<ITEM>										<!-- APP项配置信息 -->
+			<ID>1</ID>								<!-- APP唯一ID -->
+			<NAME>AUDI</NAME>						<!-- APP的名称 -->
+			<DESC>AUDI erWin</DESC>					<!-- APP的描述 -->
+			<URL>https://erwin.audiusa.com</URL>
+			<AUTH>1</AUTH>
+		</ITEM>
+		<ITEM>
+			<ID>2</ID>
+			<NAME>BMW</NAME>
+			<DESC>BMW Technical Information System</DESC>
+			<URL>http://www.bmwtechinfo.com/</URL>
+			<AUTH>1</AUTH>
+		</ITEM>
+		<ITEM>
+			<ID>3</ID>
+			<NAME>CHRYLSER</NAME>
+			<DESC>CHRYLSER Tech Authority</DESC>
+			<URL>http://www.techauthority.com/</URL>
+			<AUTH>1</AUTH>
+		</ITEM>
+		<ITEM>
+			<ID>4</ID>
+			<NAME>FORD</NAME>
+			<DESC>FORD Motorcraft Service</DESC>
+			<URL>http://www.motorcraftservice.com/</URL>
+			<AUTH>1</AUTH>
+		</ITEM>
+		<ITEM>
+			<ID>5</ID>
+			<NAME>GM</NAME>
+			<DESC>GM Tech Info System</DESC>
+			<URL>http://www.gmtechinfo.com</URL>
+			<AUTH>1</AUTH>
+		</ITEM>
+		<ITEM>
+			<ID>6</ID>
+			<NAME>HONDA</NAME>
+			<DESC>HONDA/ACURA ServiceExpress</DESC>
+			<URL>http://www.serviceexpress.honda.com/</URL>
+			<AUTH>1</AUTH>
+		</ITEM>
+		<ITEM>
+			<ID>7</ID>
+			<NAME>Porsche</NAME>
+			<DESC>Porsche PIWIS TSI</DESC>
+			<URL>https://techinfo2.porsche.com/PAGInfosystem/VFModuleManager?Type=GVOStart</URL>
+			<AUTH>1</AUTH>
+		</ITEM>
+		<ITEM>
+			<ID>8</ID>
+			<NAME>Toyota TIS</NAME>
+			<DESC>Toyota TIS Technical Information System</DESC>
+			<URL>http://techinfo.toyota.com/</URL>
+			<AUTH>1</AUTH>
+		</ITEM>
+		<ITEM>
+			<ID>9</ID>
+			<NAME>Subaru</NAME>
+			<DESC>Subaru Technical Information System</DESC>
+			<URL>http://techinfo.subaru.com/</URL>
+			<AUTH>1</AUTH>
+		</ITEM>
+		<ITEM>
+			<ID>10</ID>
+			<NAME>Volkswagen</NAME>
+			<DESC>Volkswagen erWin</DESC>
+			<URL>https://erwin.vw.com</URL>
+			<AUTH>1</AUTH>
+		</ITEM>
+		<ITEM>
+			<ID>11</ID>
+			<NAME>Volvo</NAME>
+			<DESC>Volvo Tech Info</DESC>
+			<URL>http://www.volvotechinfo.com</URL>
+			<AUTH>1</AUTH>
+		</ITEM>
+		<ITEM>
+			<ID>12</ID>
+			<NAME>HYUNDAI</NAME>
+			<DESC>HYUNDAI Service Information</DESC>
+			<URL>http://www.hmaservice.com/</URL>
+			<AUTH>1</AUTH>
+		</ITEM>
+		<ITEM>
+			<ID>13</ID>
+			<NAME>KIA</NAME>
+			<DESC>KIA Tech Info</DESC>
+			<URL>http://www.kiatechinfo.com/</URL>
+			<AUTH>1</AUTH>
+		</ITEM>
+		<ITEM>
+			<ID>14</ID>
+			<NAME>Mercedes Benz</NAME>
+			<DESC>Mercedes Benz STAR TekInfo</DESC>
+			<URL>http://www.startekinfo.com/</URL>
+			<AUTH>1</AUTH>
+		</ITEM>
+		<ITEM>
+			<ID>15</ID>
+			<NAME>Mitsubishi</NAME>
+			<DESC>Mitsubishi Service Information</DESC>
+			<URL>https://mitsubishitechinfo.com/</URL>
+			<AUTH>1</AUTH>
+		</ITEM>
+		<ITEM>
+			<ID>16</ID>
+			<NAME>Suzuki</NAME>
+			<DESC>Suzuki Tech Info</DESC>
+			<URL>http://www.suzukitechinfo.com/</URL>
+			<AUTH>1</AUTH>
+		</ITEM>
+</SPS>

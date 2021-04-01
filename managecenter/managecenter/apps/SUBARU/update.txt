@@ -1,0 +1,46 @@
+# SUBARU SSM Driver Update History
+
+
+============================================================
+## 2020.10.29 	v2020.10.29
+------------------------------------------
+* 优化: DoNET 远程诊断模式网络延迟.
+* 修复: 测试过程中出现错误提示框.
+------------------------------------------
+* OPT: Optimize DoNET remote diagnosis mode network latency.
+* Fix: Fix error message box when diagnosis.
+
+
+============================================================
+## 2020.08.12 	v2020.08.12
+------------------------------------------
+!!! 警告: 在更新此驱动前, 请先更新客户端 1.8.0 和 VCI 固件 1.8.0.0
+!!! WARN: Before update this driver, Please updata manager V1.8.0 and VCI fw v1.8.0.0
+------------------------------------------
+* 更新: 同步更新新版本 SDK 和 VCI 固件 1.8.0
+------------------------------------------
+* UPD: Update new SDK and firmware 1.8.0
+
+
+============================================================
+## 2016.03.03  v2016.03.03
+1. Add DST-i J2534 Driver for IMMO.
+
+
+============================================================
+## 2016.01.07  v2016.01.07
+1. Fix period msg tx error, add extra rx filter.
+2. Add protocol ISO14230.
+
+
+============================================================
+## 2015.08.06  v2015.01.150806
+1. Fix ISO15765 SetConfig CAN Pading Byte Error(Config ID is not 0x10000).
+
+
+============================================================
+## 2015.07.13  v2015.01.150713
+1. Fix ISO15765 CAN Pading default to 0x00(LandRover reprogramming error).
+2. Fix Tester Present Message Priority to Highest(TX Force when programming).
+2. Fix ISO15765 send long frame flow ctrl(TX_ST_MIN 0xFFFF error).
+

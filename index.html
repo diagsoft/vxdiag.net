@@ -1,0 +1,971 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+ <!-- 
+    <link rel='stylesheet'  type='text/css' href='http://fonts.allscanner.com/css?family=yeseva+one:400|Droid+Sans|Droid+Sans:bold|Open+Sans:300italic,400italic,600italic,300,400,600|Tangerine:400,700&subset=$subsets'>
+-->
+    <link rel='stylesheet'  type='text/css'>
+		<style type="text/css">
+			 	body,div,h1,h2,h3,h4,h5,h6,h7,p,a{font-family:yeseva one !important;}
+		</style>
+    <title>VXDIAG 云诊断</title>
+    <meta name="keywords" content="" />
+	  <meta name="description" content="" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.48">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+		
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/templatemo_style.css" rel="stylesheet">
+    <link href="css/circle.css" rel="stylesheet">
+    <link href="css/jquery.bxslider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/nivo-slider.css">
+    <script src="js/modernizr.custom.js"></script>    
+		<script> //使用cookie , 根据浏览器语言自动跳转地址
+						if( document.cookie && (document.cookie.indexOf("FirstOpen") == -1) && window.navigator.cookieEnabled ){
+								document.cookie="FirstOpen=1";								
+								//var AllCookie = document.cookie.split(';') ;						
+								//alert(AllCookie[document.cookie.indexOf("FirstOpen")]);
+								var type=navigator.appName ;
+								if (type=="Netscape"){
+										var lang = navigator.language;
+								}
+								else{
+										var lang = navigator.userLanguage;
+								}
+								//取得浏览器语言的前两个字母
+										var lang = lang.substr(0,2);
+										
+								if (lang == "zh"){
+										window.location.href="http://www.vxdiag.net/";			
+								}			
+								else{
+										window.location.href="http://www.vxdiag.net/?lang=en";
+								}
+						}
+
+		</script>
+    <!-- 中英文语言 -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/Language.js" type="text/javascript"></script>
+		<script type="text/javascript">	//中英文切换	 
+				function GetRequest() {   
+				   var url = location.search; //获取url中"?"符后的字串   
+				   var theRequest = new Object();  				    
+				   theRequest["url"] = window.location.href ;
+				   				   
+				   if (theRequest["url"].indexOf("#") != -1) {
+				   		theRequest["url"] = theRequest["url"].split("#")[0] ;				   
+				   }
+				   
+				   if (url.indexOf("?") != -1) {   
+				   		theRequest["url"] = theRequest["url"].split(url)[0] ;
+				      var str = url.substr(1);   
+				      strs = str.split("&");  
+				      for(var i = 0; i < strs.length; i ++) {   
+				         theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);   
+				      }   
+				   }   
+				   return theRequest;   
+				}
+				var Request = new Object();
+				Request = GetRequest();		
+		    $(function() {
+		        if (Request["lang"] == "en") {
+		            var enBody = setEN($("body").html());
+		            $("body").html(enBody);
+		            var enTitle = setEN($("title").html());
+		            $("title").html(enTitle);
+		        }
+		    });
+
+		</script>
+		<!--幻灯片-->
+		<script src="flash/js/min/jquery-v1.10.2.min.js" type="text/javascript"></script>
+		<script src="flash/js/min/modernizr-custom-v2.7.1.min.js" type="text/javascript"></script>
+		<script src="flash/js/min/jquery-finger-v0.1.0.min.js" type="text/javascript"></script>
+		<!--Include flickerplate-->
+		<link href="flash/css/flickerplate.css"  type="text/css" rel="stylesheet">
+		<link href="flash/css/flickerplate2.css"  type="text/css" rel="stylesheet">
+		<link href="flash/css/flickerplate3.css"  type="text/css" rel="stylesheet">
+		<!--Execute flickerplate-->
+		<script>		
+		    jQuery.getScript("flash/js/min/flickerplate.min2.js", function(){ 
+		    	$('.flicker-example2').flicker();	
+			    	if(Request["lang"] == "en"){
+									var classDot = document.getElementsByClassName("dot");
+									for(var i=0;i < classDot.length;i++){	
+											if(i == 0) { classDot[0].setAttribute("class", "dot dotEN active");  }else{		classDot[i].setAttribute("class", "dot dotEN"); }
+									}
+						}
+				});
+		    jQuery.getScript("flash/js/min/flickerplate.min3.js", function(){ $('.flicker-example3').flicker();	});
+		    jQuery.getScript("flash/js/min/flickerplate.min.js", function(){ $('.flicker-example').flicker();	});
+		</script>	
+  </head>
+  <body>
+<!--百度统计 -->
+<script> 
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?e74e70c3003251e026fa5efdaaae55d9";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+ <script>
+ 		var imgs = new Array(0,0,0,0,0,0,0)
+ </script> 
+
+<!--    
+	  <div class="floatDivA" >
+	  		<div  class="floatDivB  nivoSliderTopText" onmouseover="this.style.background='rgba(00,150,136,0.8)';this.style.color='rgba(00,00,233,1.0)'" onmouseout="this.style.background='rgba(00,150,136,0.1)';this.style.color='rgba(00,172,233,0.8)'"  onClick="window.open('http://cloud.vxdiag.net/login','_self')" >
+					<font size="6">启动云诊断</font>
+				</div>
+		</div>
+--> 
+<!--<script>alert($(window).width())</script> -->
+    <div class="mWrapper minWidth globalPage" >
+      <div class="container" >
+        <div class="row rowMenu"   >
+          <div class="col-sm-4 col-md-4"  >
+            <div class="logo" >
+              <a href="#"><img src="images/logo.png" alt="Powerful Theme" ></a>
+            </div>
+          </div>
+          <div class="col-sm-8 col-md-8" >
+            <nav class="mainMenu" >
+              <ul class="nav" >
+                <li><a href="#download" id="Adownload" >下载客户端</a></li>
+				<li><a href="#ContactUs" id="AContactUs" >联系我们</a></li>
+                <li><a href="http://www.vxdiag.net/wiki/" target="_blank">VXDIAG WiKi</a></li>                
+                <!--
+                <li><a href="javascript:if(Request['lang'] == 'en'){window.location.href=Request['url'];} "  >中文</a></li>
+                <li><a href="javascript:if(Request['lang'] != 'en'){window.location.href=Request['url']+'?lang=en';}"  >英文</a></li>    
+                -->         
+                <li  class="selLanguage" >
+                	<a id="lang01" href="javascript:if(Request['lang'] == 'en'){window.location.href=Request['url']}">Lang[中文]</a>
+                	<a class="arrowsImg"></a>  
+                	<ul>
+                				<li><a id="lang02" href="javascript:if(Request['lang'] != 'en'){window.location.href=Request['url']+'?lang=en';}">English</a></li>
+                	</ul>	
+                </li>
+                             
+
+                
+<!--                
+                <li>               		
+                					<select class="selLanguage" id="selLanguage" onchange="selectChange(this.id);">
+							                <option value="ch">中文</option>
+							                <option value="en">英文</option>
+							            </select>                			
+                </li> -->
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!--  幻灯片  -->	
+	<div class="flicker-example  minWidth" data-block-text="false">
+	  <ul>
+	  	<li> <img src="images/flash/VCX-Arch.png" alt="slide 1" title="" /> </li>
+	  	<li> <img src="images/flash/VCX-PRO-Cloud.png" alt="slide 2" title="" />  </li>
+	  	<li> <img src="images/flash/VCX-Nano.png" alt="slide 3" title="" /> </li>
+	  	<li> <img src="images/flash/VXDIAG.png" alt="slide 4" title="" /> </li>
+	   
+	    <!--
+	    <li data-background="img/frozen-water.jpg">
+	      <div class="flick-title">Touch Enabled Through the jQuery Finger Library</div>
+	      <div class="flick-sub-text">jQuery Finger is a great touch library that has been included as part of the Flickerplate package.</div>
+	    </li>
+	    -->
+	  </ul>
+	</div>
+<!--
+			<div class=" minWidth"><iframe  src="flash/head.html" width=100% frameborder="0" scrolling="no" id="test"   ></iframe></div>
+			<script type="text/javascript">
+						function reinitIframe(){
+						var iframe = document.getElementById("test");
+						try{
+						var bHeight = iframe.contentWindow.document.body.scrollHeight;
+						var height = bHeight;
+						iframe.height = height;
+						console.log(height);
+						}catch (ex){}
+						}
+						window.setInterval("reinitIframe()", 200);
+			</script>
+
+					  <div id="slider" class="nivoSlider  minWidth " style="z-index:1;float:left;" >
+				          <img src="images/flash/VCX-Arch.png" alt="slide 1" title="" />
+				          <img src="images/flash/VCX-PRO-Cloud.png" alt="slide 2" title="" />
+				          <img src="images/flash/VCX-Nano.png" alt="slide 3" title="" />
+				          <img src="images/flash/VXDIAG.png" alt="slide 4" title="" />
+				  	</div>	
+-->				  
+<!--				  	<div class="PositionRunAppBT minWidth" >			  	
+							  	<a href="http://cloud.vxdiag.net" target="_self"   >
+										启动云诊断
+									</a>
+						</div>
+-->						
+							  	<div class="topTitle minWidth">	
+											<p> VXDIAG创新云诊断平台<br>让车辆诊断更简单 </p>
+									</div>
+				
+	<!-- 产品分类 -->	
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>  
+	<hr class="hrCss minWidth" />
+	<p>&nbsp;</p>  
+  <div class="globalPage minWidth " style="" >
+            <h3>多种车辆云诊断服务</h3>
+						<h4>云诊断平台已实现十余种主流车型原厂级诊断, 后续将持续添加更多功能</h4>
+            <div class="glView"  >
+ <!--           	
+              <div class="switcher">
+                <ul>
+                  <li id="grid" class="grid"><i class="fa fa-th-large"></i></li>
+                  <li id="list" class="list"><i class="fa fa-align-justify"></i></li>
+                </ul>
+              </div>
+  -->            
+              <div class="menuSwitch">
+                <ul>
+               <!--   <li class="cat-active" category="prod-cnt" style="display:none">所有产品</li>  
+                  <li id="SelDefaultProducts"  class="" category="webdesign">Web Design</li>
+                  <li class="" category="graphic">Graphic</li>
+                  <li class="" category="inspiration">Inspiration</li>
+                  <li class="" category="creative">Creative</li>
+								-->
+
+                  <li class="cat-active" category="prod-cnt"  style="display:none" >所有产品</li>
+                  <li id="SelDefaultProducts"  class="" category="欧洲">欧洲</li>
+                  <li id=""  class="" category="北美" >北美</li>
+                  <li id=""  class="" category="亚洲" >亚洲</li>
+
+
+                </ul>
+              </div>
+
+              <div class="imgSwitch" >
+                <div class="row"  >
+                
+                  <div class="col-xs-6 col-sm-4 col-md-4  LRpadding dbox prod-cnt 北美 " >
+                    <div class="itemCont"  >
+                      <a target="_blank" href="http://cloud.vxdiag.net/home/diagnostic/GM">
+                        <div class="thumb"><img class="img-responsive center-block"  alt="GDS 2" src="images/products/gds2.png" ></div>
+                        <div class="itemInfo">
+                          <h3>通用</h3>
+                          <h4>GDS 2</h4>
+                          <p>详情... </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-md-4  LRpadding dbox prod-cnt 北美 ">
+                    <div class="itemCont">
+                      <a target="_blank" href="http://cloud.vxdiag.net/home/diagnostic/FORD" tar>
+                        <div class="thumb"><img class="img-responsive center-block" alt="ford" src="images/products/ford-IDS.png"></div>
+                        <div class="itemInfo">
+                          <h3>福特</h3>
+                          <h4>Ford IDS</h4>
+                          <p>详情... </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-md-4  LRpadding dbox prod-cnt 欧洲 ">
+                    <div class="itemCont">
+                      <a target="_blank" href="http://cloud.vxdiag.net/home/diagnostic/PORSCHE">
+                        <div class="thumb"><img class="img-responsive center-block" alt="保时捷" src="images/products/porsche.png"></div>
+                        <div class="itemInfo">
+                          <h3>保时捷</h3>
+                          <h4>PIWIS-II</h4>
+                          <p>详情... </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-md-4  LRpadding dbox prod-cnt 欧洲 ">
+                    <div class="itemCont">
+                      <a target="_blank" href="http://cloud.vxdiag.net/home/diagnostic/VW">
+                        <div class="thumb"><img class="img-responsive center-block" alt="大众" src="images/products/offboard-DISS.png"></div>
+                        <div class="itemInfo">
+                          <h3>大众</h3>
+                          <h4>ODIS</h4>
+                          <p>详情... </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-md-4  LRpadding dbox prod-cnt 欧洲 ">
+                    <div class="itemCont">
+                      <a target="_blank" href="http://cloud.vxdiag.net/home/diagnostic/AUDI">
+                        <div class="thumb"><img class="img-responsive center-block" alt="奥迪" src="images/products/audi-IDS.png"></div>
+                        <div class="itemInfo">
+                          <h3>奥迪</h3>
+                          <h4>ODIS</h4>
+                          <p>详情... </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-md-4  LRpadding dbox prod-cnt 欧洲 ">
+                    <div class="itemCont">
+                      <a target="_blank" href="http://cloud.vxdiag.net/home/diagnostic/JLR">
+                        <div class="thumb"><img class="img-responsive center-block" alt="JLR SDD" src="images/products/jlr-sdd.png"></div>
+                        <div class="itemInfo">
+                          <h3>路虎</h3>
+                          <h4>JLR SDD</h4>
+                          <p>详情... </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-md-4  LRpadding dbox prod-cnt 欧洲 ">
+                    <div class="itemCont">
+                      <a target="_blank" href="http://cloud.vxdiag.net/home/diagnostic/VOLVO">
+                        <div class="thumb"><img class="img-responsive center-block" alt="VIDA" src="images/products/vida.png"></div>
+                        <div class="itemInfo">
+                          <h3>沃尔沃</h3>
+                          <h4>Volvo VIDA</h4>
+                          <p>详情... </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-md-4  LRpadding dbox prod-cnt 亚洲 ">
+                    <div class="itemCont">
+                      <a target="_blank" href="http://cloud.vxdiag.net/home/diagnostic/MAZDA">
+                        <div class="thumb"><img class="img-responsive center-block" alt="" src="images/products/Mazda-IDS.png"></div>
+                        <div class="itemInfo">
+                          <h3>马自达</h3>
+                          <h4>Mazda IDS</h4>
+                          <p>详情... </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+<!--                 
+                  <div class="col-xs-6 col-sm-4 col-md-4  LRpadding dbox prod-cnt 亚洲 ">
+                    <div class="itemCont">
+                      <a target="_blank" href="http://cloud.vxdiag.net/home/diagnostic/NISSAN">
+                        <div class="thumb"><img class="img-responsive center-block" alt="" src="images/products/nissan-ids.png"></div>
+                        <div class="itemInfo">
+                          <h3>日产</h3>
+                          <h4>Consult-III Plus</h4>
+                          <p>详情... </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+ -->                 
+                  <div class="col-xs-6 col-sm-4 col-md-4  LRpadding dbox prod-cnt 亚洲 ">
+                    <div class="itemCont">
+                      <a target="_blank" href="http://cloud.vxdiag.net/home/diagnostic/TOYOTA">
+                        <div class="thumb"><img class="img-responsive center-block" alt="" src="images/products/Techstream.png"></div>
+                        <div class="itemInfo">
+                          <h3>丰田</h3>
+                          <h4>Techstream</h4>
+                          <p>详情... </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-md-4  LRpadding dbox prod-cnt 亚洲 ">
+                    <div class="itemCont">
+                      <a target="_blank" href="http://cloud.vxdiag.net/home/diagnostic/HONDA">
+                        <div class="thumb"><img class="img-responsive center-block" alt="" src="images/products/hds.png"></div>
+                        <div class="itemInfo">
+                          <h3>本田</h3>
+                          <h4>HDS</h4>
+                          <p>详情... </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-md-4  LRpadding dbox prod-cnt 亚洲 ">
+                    <div class="itemCont">
+                      <a target="_blank" href="http://cloud.vxdiag.net/home/diagnostic/SUBARU">
+                        <div class="thumb"><img class="img-responsive center-block" alt="" src="images/products/Subaru.png"></div>
+                        <div class="itemInfo">
+                          <h3>斯巴鲁</h3>
+                          <h4>Subaru Select Monitor III</h4>
+                          <p>详情... </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-md-4  LRpadding dbox prod-cnt 欧洲 ">
+                    <div class="itemCont">
+                      <a target="_blank" href="http://cloud.vxdiag.net/home/diagnostic/BENZ">
+                        <div class="thumb"><img class="img-responsive center-block" alt="" src="images/products/benz.png"></div>
+                        <div class="itemInfo">
+                          <h3>奔驰</h3>
+                          <h4>Xentry & DAS</h4>
+                          <p>详情... </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="col-xs-6 col-sm-4 col-md-4  LRpadding dbox prod-cnt 欧洲 ">
+                    <div class="itemCont">
+                      <a target="_blank" href="http://cloud.vxdiag.net/home/diagnostic/BMW">
+                        <div class="thumb"><img class="img-responsive center-block" alt="" src="images/products/bmw.png"></div>
+                        <div class="itemInfo">
+                          <h3>宝马</h3>
+                          <h4>ISID R2</h4>
+                          <p>详情... </p>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                  
+                </div>
+<!--
+                <div class="loadit"><button type="button" class="btn btn-primary">Load More</button></div>
+-->
+              </div>
+            </div>
+
+	</div>
+
+	
+	
+	<!-- 一键快速连接云诊断 -->	
+  <p>&nbsp;</p>  
+	<hr class="hrCss minWidth" />
+	<p>&nbsp;</p>  
+	<div  class=" globalPage minWidth " >
+		<h3>一键快速连接云诊断</h3>
+		<h4>只需要安装客户端软件, 就可以一键连接到各种云诊断服务器, 实现快速车辆诊断</h4>
+		<div class="flicker-example2 zoomImg" data-block-text="false">
+		  <ul>
+		  	<li> <img src="images/connect/2.png" alt="slide 1" title="" /> </li>
+		  	<li> <img src="images/connect/3.png" alt="slide 2" title="" />  </li>
+		  	<li> <img src="images/connect/4.png" alt="slide 3" title="" /> </li>
+		  	<li> <img src="images/connect/5.png" alt="slide 4" title="" /> </li>
+		  	<li> <img src="images/connect/6.png" alt="slide 4" title="" /> </li>	
+		    <!--
+		    <li data-background="img/frozen-water.jpg">
+		      <div class="flick-title">Touch Enabled Through the jQuery Finger Library</div>
+		      <div class="flick-sub-text">jQuery Finger is a great touch library that has been included as part of the Flickerplate package.</div>
+		    </li>
+		    -->
+		  </ul>
+		  <div class="dot-navigation center">
+		  	<ul>
+		  		<li><div class="dot active ">运行客户端</div></li>
+		  		<li><div class="dot">进入云诊断</div></li>
+		  		<li><div class="dot">选择车型</div></li>
+		  		<li><div class="dot">打开云诊断</div></li>
+		  		<li><div class="dot">开始诊断</div></li>
+		  	</ul>
+		  </div>
+
+		</div>
+	</div>	
+	
+<!--
+		 <div class="connectAPP"   >
+		 			<div  class="Ltxt" id="Ltxt"  >		 					
+		 					<h4 id="txt-1" onmouseover="changeImg(this.id,'imgs')" > <img src="images/connect/0.png"  /> 运行客户端</h4>
+		 					<h4 id="txt-2" onmouseover="changeImg(this.id,'imgs')" > <img src="images/connect/0.png" /> 进入云诊断</h4>
+		 					<h4 id="txt-3" onmouseover="changeImg(this.id,'imgs')" > <img src="images/connect/0.png" /> 选择车型</h4>
+		 					<h4 id="txt-4" onmouseover="changeImg(this.id,'imgs')" > <img src="images/connect/0.png" /> 打开云诊断</h4>
+		 					<h4 id="txt-5" onmouseover="changeImg(this.id,'imgs')"  style="opacity: 1.0;filter: alpha(opacity=100);" > <img src="images/connect/0.png" /> 开始诊断</h4>
+		 			</div> 
+		 			<div id="Rimg"  class="Rimg zoomImg"  >
+		 				   <img src="images/connect/2.png"  id="imgs1" style="display:none;" alt="运行客户端" onError="imgs[1]=1;"  />
+		 				   <img src="images/connect/3.png"  id="imgs2" style="display:none;" alt="进入云诊断" onError="imgs[2]=1;"   />
+		 				   <img src="images/connect/4.png"  id="imgs3" style="display:none;" alt="选择车型" onError="imgs[3]=1;"   />
+		 				   <img src="images/connect/5.png"  id="imgs4" style="display:none;" alt="打开云诊断" onError="imgs[4]=1;"  />
+		 				   <img src="images/connect/6.png"  id="imgs5"  alt="开始诊断"  onError="imgs[5]=1;"  />
+		 				   <div id="RimText" class="RimText"  ></div> 
+		 			</div>
+		 </div>
+	</div>	
+-->
+
+	<!-- 流畅稳定的云诊断系统 -->	
+  <p style="clear:both;">&nbsp;</p>
+  <p>&nbsp;</p>  
+	<hr style="border-top:solid 1px #c5e4ed; " />
+	<p>&nbsp;</p>  
+	<div class=" globalPage minWidth ">
+			<h3>流畅稳定的云诊断系统</h3> 
+			<h4>VXDIAG云诊断采用阿里云高性能云服务器,保证车辆诊断稳定流畅</h4>
+<!--			<img src="images/slider/img_1.png" style="float:left;"  />    -->
+			<div class="tables " >
+				
+						<div class="mouseHover" >
+								<p><img src="images/aliyun/cpu.png" /> <br> 双核CPU </p>
+						</div>
+						<div class="mouseHover" >
+								<p> <img src="images/aliyun/memory.png" /> <br>4G内存 </p>
+						</div>
+						<div class="mouseHover" >
+								<p><img src="images/aliyun/ssd.png" />  <br>SSD存储 </p>
+						</div>
+						<div  class="mouseHover"  style="border-right:0px;">
+								<p> <img src="images/aliyun/wlan.png" /> <br>多线100M网络 </p>
+						</div>
+			
+			</div>	
+	</div>
+	<div style="clear:both;"><p>&nbsp;</p></div>
+	<!-- 为何选择 VXDIAG 云诊断 -->	
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>  
+	<hr style="border-top:solid 1px #c5e4ed; " />
+	<p>&nbsp;</p>  
+	<div class="selVX  globalPage minWidth ">
+			<h3>为何选择VXDIAG云诊断</h3>
+			<div class="mouseHover" id="selvx" >
+				<img src="images/selVXDIAG/1.png" id="selvxImg" />
+				<h4>降低维修运营成本</h4>
+				<p>一台电脑、一台设备即可使用多种原厂级车辆诊断功能, 告别各种维修设备重复投入</p>
+				
+			</div>
+			<div class="mouseHover" id="selvx" >
+				<img src="images/selVXDIAG/2.png" id="selvxImg" />
+				<h4>提升维修效率</h4>
+				<p>专注于自身维修工作, 云端诊断随时可用, 不需要繁杂的诊断电脑维护和软件安装</p>
+			</div>
+			<div class="mouseHover" id="selvx" >
+				<img src="images/selVXDIAG/3.png" id="selvxImg" />
+				<h4>自由使用</h4>
+				<p>不仅可以在线云诊断, 同样可以离线诊断, 用户可自行安装软件和驱动, 建立自己的诊断环境</p>
+			</div>
+			
+			
+	</div>
+ 
+<!-- WENWW幻灯片 Start -->
+  <p style="clear:both;position:static;">&nbsp;</p>
+  <p>&nbsp;</p>  
+	<hr style="border-top:solid 1px #c5e4ed; " />
+	<p>&nbsp;</p>  	
+	<div class="globalPage minWidth  ">
+		<div class="flicker-example3 zoomImg" data-block-text="false">
+		  <ul>
+		  	<li> <img src="images/changes/lanren1.png" alt="slide 1" title="" /> </li>
+		  	<li> <img src="images/changes/lanren2.png" alt="slide 2" title="" />  </li>
+		  	<li> <img src="images/changes/lanren3.png" alt="slide 3" title="" /> </li>		   
+		  </ul>
+		  <div class="dot-navigation center">
+		  	<ul>
+		  		<li><div class="dot active ">			
+		  			<p>套餐1</p>
+		  			<p>VCX Nano + vxdiag云诊断</p>
+		  			<p>价格:RMB****</p>
+		  			<hr>
+		  			<p>硬件:VCX Nano</p>
+		  			<p>详情..</p>
+		  		</div></li>
+		  		<li><div class="dot">
+		  			<p>套餐2</p>
+		  			<p>VXDIAG + vxdiag云诊断</p>
+		  			<p>价格:RMB****</p>
+		  			<hr>
+		  			<p>硬件:VXDIAG</p>
+		  			<p>详情..</p>
+		  		</div></li>
+		  		<li><div class="dot">
+		  			<p>套餐3</p>
+		  			<p>VCX Pro + vxdiag云诊断</p>
+		  			<p>价格:RMB****</p>
+		  			<hr>
+		  			<p>硬件:VCX Pro</p>
+		  			<p>详情..</p>
+		  		</div></li>
+		  		
+		  	</ul>
+		  </div>
+
+		</div>
+	</div>	
+<!-- WENWW幻灯片 End -->
+	
+	<!-- 驱动下载 -->	
+  <p>&nbsp;</p> 
+  <p>&nbsp;</p> 
+	<hr class="hrCss minWidth"  id="download"/>
+	<p>&nbsp;</p> 	
+	
+	<div class="DLoad minWidth">
+		<div class="DLoadA"><h3>VX Manager客户端</h3></div>
+		<div class="DLoadB">
+			<p>当前版本:V1.8.1 Build 1012</p>	
+			<p>更新日期:2020-10-12</p>
+			<a class="buttons" href="http://www.vxdiag.net/managecenter/download/vxdiag.zip" target="_blank" >VX Manager </a>
+		</div>
+<!--		
+		<div class="DLoadC">
+			<p>当前版本:V1.6.4 Build 0522 beta</p>	
+			<p>更新日期:2020-05-22</p>
+			<a class="buttons" href="http://www.vxdiag.net/managecenter/download/vxdiag_beta.zip"  target="_blank" > VX Manager 测试版 </a>
+		</div>
+-->	
+	</div>
+	<hr class="hrCss minWidth" id="ContactUs"  />
+	
+	<div  class="globalPage minWidth  "  >
+				<div class="DLreQ" >
+							<h4 style="" >客户端要求</h4>
+							<ul>
+										<li><img src="images/download/1.png" alt="Windows" /> <br> <h4>Windows 7/8/10</h4></li>
+										<li onClick="window.open('https://www.microsoft.com/zh-cn/download/internet-explorer-11-for-windows-7-details.aspx')" ><img src="images/download/2.png" alt="IE" /> <br> <h4>Internet Explorer 11+</h4></li>
+										<li onClick="window.open('http://rj.baidu.com/soft/detail/14744.html')" ><img src="images/download/3.png" alt="chorme" /> <br> <h4>Google Chrome</h4></li>
+							</ul>							
+				</div>
+				<div class="DLimg zoomImg" >
+							<img  src="images/download/4.gif" alt="VX Manager"   />			
+				</div>
+	</div>
+
+	
+		
+   <!-- 联系我们 -->	
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>  
+	<hr class="hrCss minWidth" id="ContactUs"  />
+	<p>&nbsp;</p>  
+	<div class=" globalPage minWidth " >
+			<h3>联系我们</h3>
+			<div class="contact">
+						<div class="contactImg  mouseHover">
+							<p> <img src="images/Contact/1.png" alt="联系电话"  />  </p>
+							<h4>+86-0755-33000960</h4>
+						</div>
+			
+						<div class="contactImg contactMouse  mouseHover"   onClick="javascript:window.open('mailto:info@allscanner.com','_blank');" >
+							<p> <img src="images/Contact/2.png" alt="Email" />  </p>
+							<h4>info@allscanner.com</h4>
+						</div>
+						
+						<div class="contactImg  contactMouse  mouseHover"   onClick="javascript:window.open('http://wpa.qq.com/msgrd?v=3&uin=273734210&site=qq&menu=yes','_blank');" >
+							<p> <img src="images/Contact/3.png" alt="QQ"  />  </p>
+							<h4>273734210</h4>
+						</div>				
+										
+						<div class="contactImg contactWX">
+							<p> <img src="images/Contact/4.png" alt="微信" />   </p>
+							 <img src="images/Contact/5.png" alt="微信二维码"  />  
+						</div>
+						
+			</div>
+	</div>
+	
+
+  
+<!-- 底部信息  -->  
+  <p style="width:100%;clear:both;">&nbsp;</p>
+	<hr class="hrCss minWidth" />
+	<!--
+	<hr style="border-top:solid 1px #c5e4ed; margin-bottom:0px;" />   -->
+
+  <div class="bfWrap text-center minWidth" style="margin-top:-20px;line-height:50px;background-color:rgba(00,150,136,0.1);" >
+        <div class="templatemo_footer"  >
+        	Copyright © 2016 VXDIAG.NET
+        	<br/><a href="http://www.beian.miit.gov.cn" target="_blank"><i></i> 粤ICP备16021948号-2 </a>
+        </div>
+        
+  </div>
+
+
+  	
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.cycle2.min.js"></script>
+    <script src="js/jquery.cycle2.carousel.min.js"></script>
+    <script src="js/jquery.nivo.slider.pack.js"></script>
+    <script>$.fn.cycle.defaults.autoSelector = '.slideshow';</script>
+    <script src="js/jquery.cookie.js"></script>
+    <!--  单击图片弹出放大 Start -->
+    <script src='js/jquery.museum.js'></script>
+    <script>
+    	
+				window.onscroll = function() {  
+        var downloadTop = document.getElementById('download').offsetTop - window.scrollY ;
+        var ContactUsTop = document.getElementById('ContactUs').offsetTop - window.scrollY ;
+			        if( (downloadTop < 500) && ( downloadTop > -400) ){
+			        	  document.getElementById('Adownload').style.backgroundColor="#00897B" ;
+			        	  document.getElementById('Adownload').blur() ;
+			        }
+			        else{
+			        		document.getElementById('Adownload').style.backgroundColor="" ;
+			        		//document.getElementById('Adownload').blur() ;
+			        }
+			        
+			        if( ContactUsTop < 500 ){
+			        	  document.getElementById('AContactUs').style.backgroundColor="#00897B" ;
+			        	  document.getElementById('AContactUs').blur() ;
+			        }
+			        else{
+			        		document.getElementById('AContactUs').style.backgroundColor="" ;
+			        		//document.getElementById('AContactUs').blur() ;
+			        }
+    		} 
+    	
+    	
+        $(document).ready(function() {
+          //  $.museum($('#zoomImg img')); //例子 <div id="zoomImg" ><img src="1.jpg" /> </div>
+            $.museum($('.zoomImg img')); //例子 <div class="zoomImg" ><img src="1.jpg" /> </div>
+        });
+    </script>
+    <!--  单击图片弹出放大 END -->
+    
+      <!--  URL不显示锚点 -->
+      <script type="text/javascript">
+
+      $(function() {
+		        $('a[href*=#]:not([href=#])').click(function() {
+		          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+		            var target = $(this.hash);
+		            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+		            if (target.length) {
+		              $('html,body').animate({
+		                scrollTop: target.offset().top
+		              }, 1000);
+		              return false;
+		            }
+		          }     		
+                	
+        
+        });
+      });
+      </script>
+      <!--  导航菜单浮动 -->
+      <script src="js/stickUp.min.js" type="text/javascript"></script>
+      <script type="text/javascript">
+        //initiating jQuery
+        jQuery(function($) {
+          $(document).ready( function() {
+            //enabling stickUp on the '.navbar-wrapper' class
+            $('.mWrapper').stickUp();
+            
+            //  $('.nivoSliderTopText').stickUp();
+          });
+        });
+      
+      </script>
+  	
+    
+    <script type="text/javascript">
+      $(function(){
+          var default_view = 'grid';
+          if($.cookie('view') !== 'undefined'){
+              $.cookie('view', default_view, { expires: 7, path: '/' });
+          } 
+          function get_grid(){
+              $('.list').removeClass('list-active');
+              $('.grid').addClass('grid-active');
+              $('.prod-cnt').animate({opacity:0},function(){
+                  $('.prod-cnt').removeClass('dbox-list');
+                  $('.prod-cnt').addClass('dbox');
+                  $('.prod-cnt').stop().animate({opacity:1});
+              });
+          }
+          function get_list(){
+              $('.grid').removeClass('grid-active');
+              $('.list').addClass('list-active');
+              $('.prod-cnt').animate({opacity:0},function(){
+                  $('.prod-cnt').removeClass('dbox');
+                  $('.prod-cnt').addClass('dbox-list');
+                  $('.prod-cnt').stop().animate({opacity:1});
+              });
+          }
+          if($.cookie('view') == 'list'){ 
+              $('.grid').removeClass('grid-active');
+              $('.list').addClass('list-active');
+              $('.prod-cnt').animate({opacity:0});
+              $('.prod-cnt').removeClass('dbox');
+              $('.prod-cnt').addClass('dbox-list');
+              $('.prod-cnt').stop().animate({opacity:1}); 
+          } 
+
+          if($.cookie('view') == 'grid'){ 
+              $('.list').removeClass('list-active');
+              $('.grid').addClass('grid-active');
+              $('.prod-cnt').animate({opacity:0});
+                  $('.prod-cnt').removeClass('dboxlist');
+                  $('.prod-cnt').addClass('dbox');
+                  $('.prod-cnt').stop().animate({opacity:1});
+          }
+
+          $('#list').click(function(){   
+              $.cookie('view', 'list'); 
+              get_list()
+          });
+
+          $('#grid').click(function(){ 
+              $.cookie('view', 'grid'); 
+              get_grid();
+          });
+
+          /* filter */
+          $('.menuSwitch ul li').click(function(){
+          		var NumCategoryID = 0; 
+              var CategoryID = $(this).attr('category');
+              $('.menuSwitch ul li').removeClass('cat-active');
+              $(this).addClass('cat-active');
+              
+              $('.prod-cnt').each(function(){/* wenww 统计分类个数 */                 
+                  if(($(this).hasClass(CategoryID)) == true){
+                     NumCategoryID = NumCategoryID + 1 ;
+                  };                  
+              });
+              $('.prod-cnt').each(function(){
+                  if(($(this).hasClass(CategoryID)) == false){
+                     $(this).css({'display':'none'});
+                  };
+                  switch(NumCategoryID){ /* wenww 根据个数不同 显示不同样式 */
+                  		case 1:
+                  					$(this).css({'width':'100%'});
+                  					break;
+                  		case 2:
+                  					$(this).css({'width':'50%'});
+                  					break;
+                  		default:
+                  					$(this).css({'width':'33.333%'});                  		
+                  }
+                  
+              });
+              
+              $('.'+CategoryID).fadeIn(); 
+              
+          });
+      });
+    </script>
+
+    <script type="text/javascript">
+    $(window).load(function() { 
+        //打开网页时,单击ID为SelDefaultProducts的标签, 实现网格/列表显示产品分类中默认显示的分类
+        document.getElementById('SelDefaultProducts').click();
+        $('#slider').nivoSlider({
+          prevText: '',
+          nextText: '',
+          controlNav: false,
+        });
+    });
+    </script>
+    <script>
+      $(document).ready(function(){
+
+        // hide #back-top first
+        $("#back-top").hide();
+        
+        // fade in #back-top
+        $(function () {
+          $(window).scroll(function () {
+            if ($(this).scrollTop() > 100) {
+              $('#back-top').fadeIn();
+            } else {
+              $('#back-top').fadeOut();
+            }
+          });
+
+          // scroll body to 0px on click
+          $('#back-top a').click(function () {
+            $('body,html').animate({
+              scrollTop: 0
+            }, 800);
+            return false;
+          });
+        });
+
+      });
+      </script>
+      <script type="text/javascript">
+      <!--
+          function toggle_visibility(id) {
+             var e = document.getElementById(id);
+             if(e.style.display == 'block'){
+                e.style.display = 'none';
+                $('#togg').text('show footer');
+            }
+             else {
+                e.style.display = 'block';
+                $('#togg').text('hide footer');
+            }
+          }
+      //-->
+      </script>
+      <script type="text/javascript" src="js/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+
+
+	
+		<script>
+/*
+					function changeImg(imgName,imgID){
+								document.getElementById(imgID).src = "images/connect/"+imgName+".png" ;
+								for (i=1;i<10 ;i++ ) 
+								{						
+											if(i==imgName){
+														document.getElementById(i).style.opacity="1.0";
+														document.getElementById(i).style.filter="alpha(opacity=100)";
+											}else{
+											
+														document.getElementById(i).style.opacity="0.6";
+														document.getElementById(i).style.filter="alpha(opacity=60)";
+											}	
+								
+								}
+					}
+*/
+					
+/* WENWW 一键连接云诊断 Start */
+					function changeImg(txtID,imgID){
+								var txtWord = txtID.split("-")[0]+'-' ; 
+								var txtNum = txtID.split("-")[1] ;
+								var selImgID = imgID+txtNum ;										
+								document.getElementById(selImgID).style.display="inline"; 
+								document.getElementById(txtID).style.opacity="1.0"; 
+								document.getElementById(txtID).style.filter="alpha(opacity=100)";
+
+								//图片没有或出错时
+								if(imgs[txtNum]){
+										document.getElementById(selImgID).style.height="300px";
+										document.getElementById(selImgID).style.paddingTop="140px";
+										document.getElementById(selImgID).style.paddingLeft="40%";
+										document.getElementById(selImgID).src ="images/connect/error.png"
+										RimText.innerHTML ="<p>" + document.getElementById(selImgID).alt + "</p>";
+										//RimText.innerText = document.getElementById(selImgID).alt ;
+								}else{
+										RimText.innerText = " ";
+								
+								}
+								
+								for(var i=1;i <= document.getElementById("Ltxt").getElementsByTagName("h4").length ;i++){
+										var j = imgID+i ;	
+										var txtAllID = txtWord+i;											
+										if(j != selImgID){
+														document.getElementById(j).style.display="none";
+										}
+										if(txtAllID != txtID){
+															document.getElementById(txtAllID).style.opacity="0.6"; 
+															document.getElementById(txtAllID).style.filter="alpha(opacity=60)";
+										}
+										
+								}	
+
+
+					}
+/* WENWW 一键连接云诊断 End */
+					
+					
+					
+					
+		</script>		
+
+  </body>
+ </html>
+ 

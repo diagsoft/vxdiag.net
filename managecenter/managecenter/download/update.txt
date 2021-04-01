@@ -1,0 +1,294 @@
+# VX Manager Update History Log
+-----------------------------------------------------------------------
+
+
+---------------------------------
+## 2020.09.22	V1.8.1 Build 0922
+---------------------------------
+* 优化 DoNET 远程诊断服务组件.
+---------------------------------
+* OPT: Optimize DoNet remote diagnosis components.
+
+
+---------------------------------
+## 2020.08.19	V1.8.0 Build 0819
+---------------------------------
+* 更新 集成更新软件开发平台 SDK v1.8.0.0
+* 更新 适配更新设备 VCI 固件 v1.8.0.0
+* 优化 用户界面
+---------------------------------
+* UPD: Update new platform SDK v1.8.0.0
+* UPD: Update VCI firmware v1.8.0.0
+* OPT: Optimize user interface
+
+<!--more-->
+=================================
+## 2020.05.22	V1.6.4 Build 0522 beta
+---------------------------------
+* 优化 同一设备每次连接时断开之前占用连接.
+* 优化 远程诊断服务后台运行图标和提示信息.
+* 新增 远程诊断服务日志.
+---------------------------------
+* Optimize Clean previous connection before connect to remote.
+* Optimize DoNet service backgroud tray icon and tray tips.
+* Add DoNet service debug log.
+
+=================================
+## 2020.03.17	V1.6.3 Build 0317 beta
+---------------------------------
+* 更新 新版DoNet远程诊断支持.
+* 优化 部分界面.
+---------------------------------
+* Update new DoNet remote diagnosis.
+* Optimize some user interface.
+
+
+=================================
+## 2019.09.02	V1.6.2 Build 0902
+---------------------------------
+* 优化 DoIP 固件升级程序稳定性.
+* 更新 离线时提示且不自动弹出固件升级.
+---------------------------------
+* Optimize the stability of the DoIP firmware upgrade program.
+* Update Offline prompts and do not upgrades automatically.
+
+
+=================================
+## 2019.06.25	V1.6.0 Build 0625
+---------------------------------
+* 新增 客户端软件更新检测提示.
+* 更新 日志管理工具 v1.2
+* 更新 SDK V1.6.6.0 (更新日志格式).
+---------------------------------
+* Add update detection for client software.
+* Update LogManager v1.2
+* Update SDK V1.6.6.0 (log output format).
+
+
+=================================
+## 2019.04.28	V1.5.0 Build 0428
+---------------------------------
+* 优化 DoIP 和 VCI 固件升级统一, 新固件可用时自动提示升级.
+* 优化 客户端与服务器网络连接稳定性, 提升连接速度.
+* 优化 车辆诊断驱动安装界面更新, 修复异常情况下多处错误.
+* 优化 重启设备时同时重启 VCI 和 DoIP 系统.
+* 优化 设备正在诊断时, 管理工具可正常打开不影响设备使用.
+* 新增 错误报告, 可上传错误日志到服务器.
+* 更新 SDK V1.6.5.0, 修复以下问题:
+    -  设备配置为自动连接时可能在特殊环境下连接VCI失败(WIN7 64bit 内存过低).
+    -  设备测车时诊断程序异常关闭, 再次连接VCI可能失败.
+    -  增加设备占用状态检测.
+---------------------------------
+* Optimize DoIP & VCI firmware update combine, automatically upgrade when new firmware is available.
+* Optimize client-server network connection and improve connection speed. 
+* Optimize vehicle diagnostics app installation/update errors. 
+* Optimize Restart VCI and DoIP systems simultaneously when rebooting the device. 
+* Optimize The Manager can open device without affecting When the device is using by diagnose. 
+* Add Error report to upload error log to server. 
+* Update SDK V1.6.5.0, fix the following issues: 
+    -  Automatically connecting devices may fail in special environment(WIN7 64Bit with low memory).
+    -  After diagnosis application crash, then connect VCI may fail.
+    -  Add device using status detect.
+
+
+=================================
+## 2017.09.27	V1.4.2 Build 0927
+---------------------------------
+1. 新增设备通信接口自动扫描功能(VCXSDK-V1.6.0.0)
+2. 新增 DoIP 扩展设备信息显示
+3. 整合 DoIP 更新工具
+4. 整合 DoIP 开关工具并更新支持路虎VIN发现
+---------------------------------
+1. Add device interface AUTO detect.
+2. Add DoIP Expasion device information.
+3. Add DoIP Update tool.
+4. Add DoIP Switch tool and support JLR VIN discovery.
+
+
+=================================
+## 2017.06.20	V1.3.0 Build 0620
+---------------------------------
+1. 更新 PASSTHRU 和 BENZ PDU 驱动
+
+=================================
+## 2017.06.05	V1.3.0 Build 0605
+---------------------------------
+更新支持BENZ XENTRY:
+1. 增加 BENZ 驱动安装选项
+2. 更新 VCXNetUpdate BENZ 固件升级
+
+
+=================================
+## 2017.04.01	V1.3.0 Build 0401
+---------------------------------
+更新支持宝马带网卡新版硬件:
+1. 设备连接配置增加LAN
+2. 增加VCXNetUpdate固件升级工具 
+3. 增加VCXNetDoIP开关工具
+4. 增加VCXNetUSB远程共享工具(用于BMW云诊断)
+
+
+=================================
+## 2016.09.29	V1.2.0 Build 0929
+---------------------------------
+1. 优化 云诊断功能
+---------------------------------
+1. Optimize Cloud Diagnostic
+
+
+=================================
+## 2016.09.02	V1.2.0 Build 0902
+---------------------------------
+1. Fix VCXSDK close error for ATEN UC232A
+2. Update Passthru Driver 04.04.160831
+
+
+=================================
+## 2016.08.23	V1.2.0 Build 0823
+---------------------------------
+1. 优化 云诊断功能
+2. 更新 Passthru驱动
+---------------------------------
+1. Optimize Cloud Diagnostic
+2. Update Passthru Driver
+
+
+=================================
+## 2016.08.11	V1.2.0 Build 0811
+---------------------------------
+1. 发布 云诊断功能 Beta 测试版
+---------------------------------
+1. Release Cloud Diagnostic (Beta Version)
+
+
+=================================
+## 2016.04.12	V1.2.0 Build 0412
+---------------------------------
+1. 完善 远程诊断功能
+2. 优化 界面
+3. 更新 USB驱动v2.12.16(FT232-1550批号之后需使用新驱动)
+---------------------------------
+1. Optimize Remote Diagnostic Service
+2. Optimize UI
+3. Update USB driver v2.12.16(FT232-1550)
+
+
+=================================
+## 2016.03.03	V1.1.0 Build 0303
+---------------------------------
+1. 更新 SUBURU 驱动
+---------------------------------
+1. Update SUBURU driver
+
+
+=================================
+## 2016.02.01	V1.1.0 Build 0201
+---------------------------------
+1. 新增 远程诊断功能
+---------------------------------
+1. Add Remote Diagnostic Service
+
+
+=================================
+## 2016.01.12	V1.0.6 Build 1312
+---------------------------------
+1. 安装包增加 RP1210 和 HINO 选项.
+---------------------------------
+1. Add setup option for RP1210 and HINO.
+
+
+=================================
+## 2015.12.18	V1.0.6 Build 1218
+---------------------------------
+1. 安装包更新了Porsche驱动为16.200.151218
+---------------------------------
+1. Update Porsche driver to 16.200.151218
+
+
+=================================
+## 2015.11.19	V1.0.6 Build 1119
+---------------------------------
+1. 管理工具优化了网络连接时间，提高程序启动速度
+2. 修改设备配置，增加标准串口和蓝牙串口的配置选项
+---------------------------------
+1. Optimize VX Manager network connection, Startup is more faster.
+2. Change device configure, Add Standard COM and Bluetooth COM option.
+
+
+=================================
+## 2015.11.12	V1.0.6 Build 1112
+---------------------------------
+1. User can select to install diagnostic driver when installation.
+2. Add Wifi Update tool.
+
+
+## 2015.11.10	V1.0.6 Build 1110
+---------------------------------
+1. VCX SDK surpport for WiFi.
+2. VX Manager UI optimize.
+
+
+## 2015.06.12	V1.0.5 Build 0612
+---------------------------------
+1. Add Offline App for HD: HINO & RP1210.
+2. Fix VCX SDK Log.
+
+
+## 2015.04.27	V1.0.5 Build 0427
+---------------------------------
+1. VCX SDK Fix USB Discover method.
+2. VCX SDK Add Bluetooth serial discover method(VCX_OpenEx).
+3. Update VXManager config.ini for JLR_SDD_141(kill process).
+
+
+## 2015.03.31	V1.0.5 Build 0331
+---------------------------------
+1. Fix SDK USB ReOpen Connection Error in VMWARE.
+2. Update JLR App driver offline version to v_139.150319
+	Fix JLR registry install error in some WIN7 X64 OS
+
+
+## 2015.01.28	V1.0.5 Build 0310
+---------------------------------
+1. Fix license update error for some SN
+
+
+## 2015.01.28	V1.0.5
+---------------------------------
+1. Add Status Bar: Version, Network, OBD Volt
+2. Add SDK Version info
+3. Add Administrator privilege
+4. Fix VCX.dll comm printf length to 256
+5. Fix Offline App： SUBARU for ABS(CAN) DTC crash error
+
+
+## 2015.01.17	V1.0.4
+---------------------------------
+1. 修正JLR软件占用导致VCX.DLL运行库安装不上的问题
+
+
+## 2014.12.26	V1.0.3
+---------------------------------
+1. 界面更新
+2. 诊断应用管理逻辑修改
+3. VCX SDK Driver 更新（增加定时消息处理）
+4. 自带离线应用驱动更新
+5. 安装包大小优化（精简了字体文件）
+
+
+## 2014.11.20	V1.0.2
+---------------------------------
+1. 修正USB驱动导致设备PID为0000的问题
+2. 离线Apps增加斯巴鲁
+
+
+## 2014.10.30	V1.0.1
+---------------------------------
+1. 修正部分序列号（V41XP00074等）License更新失败
+2. 安装 VCX Manager 后清除 Apps 和 Download 目录，以确保重新从服务器下载最新 Apps
+
+
+## 2014.10.27	V1.0.0
+---------------------------------
+init release
+

@@ -1,0 +1,46 @@
+# JLR SDD Driver Update History
+
+
+============================================================
+## 2020.10.29 	v04.04.201029
+------------------------------------------
+* 优化: DoNET 远程诊断模式网络延迟.
+* 修复: 测试过程中出现错误提示框.
+------------------------------------------
+* OPT: Optimize DoNET remote diagnosis mode network latency.
+* Fix: Fix error message box when diagnosis.
+
+
+============================================================
+## 2020.08.12 	v04.04.200812
+------------------------------------------
+!!! 警告: 在更新此驱动前, 请先更新客户端 1.8.0 和 VCI 固件 1.8.0.0
+!!! WARN: Before update this driver, Please updata manager V1.8.0 and VCI fw v1.8.0.0
+------------------------------------------
+* 更新: 同步更新新版本 SDK 和 VCI 固件 1.8.0
+------------------------------------------
+* UPD: Update new SDK and firmware 1.8.0
+
+
+============================================================
+## 2017.08.29  v04.04.170829
+1. Update JLR-VCI driver to Passthru.
+2. Fix device reconnect after connection break.
+
+
+============================================================
+## 2015.07.13  v_14X.150713
+1. Fix ISO15765 CAN Pading default to 0x00(LandRover reprogramming error).
+2. Fix Tester Present Message Priority to Highest(TX Force when programming).
+2. Fix ISO15765 send long frame flow ctrl(TX_ST_MIN 0xFFFF error).
+
+
+============================================================
+## 2015.04.24  v_141.150424
+1. Add support for JLR SDD 141 Version(Add process SDDManager.exe).
+
+
+============================================================
+## 2015.03.19   v_139.150319
+1. Fix JLR registry install error in some WIN7 X64 OS
+ 
